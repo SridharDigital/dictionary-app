@@ -22,8 +22,9 @@ const App = () => {
       (item) =>
         item.word.toLocaleLowerCase() === searchValue.toLocaleLowerCase()
     );
-    console.log(item);
-    setDispalyDefinition(item?.meaning);
+    setDispalyDefinition(
+      item ? item.meaning : "Word not found in the dictionary"
+    );
   };
   return (
     <div className="root">
@@ -37,11 +38,7 @@ const App = () => {
         <button type="submit">Search</button>
       </form>
       <h2>Definition:</h2>
-      <p>
-        {dispalyDefinition
-          ? dispalyDefinition
-          : "Word not found in the dictionary"}
-      </p>
+      <p>{dispalyDefinition}</p>
     </div>
   );
 };
