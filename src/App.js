@@ -23,7 +23,7 @@ const App = () => {
         item.word.toLocaleLowerCase() === searchValue.toLocaleLowerCase()
     );
     setDispalyDefinition(
-      item ? item.meaning : "Word not found in the dictionary"
+      item ? item.meaning : "Word not found in the dictionary."
     );
   };
   return (
