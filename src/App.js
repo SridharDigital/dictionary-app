@@ -31,7 +31,7 @@ const App = () => {
       <h1 className="heading">Dictionary App</h1>
       <form onSubmit={findWord}>
         <input
-          type="search"
+          type="text"
           placeholder="Search for a word..."
           onChange={(e) => setSearchValue(e.target.value)}
         />
